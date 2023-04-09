@@ -2,12 +2,23 @@ const http = require('http');
 const mongoose = require('mongoose');
 const Posts = require('./modules/post');
 const headers = require('./headers');
-const handleSuccess = require('./handleSuccess')
-const handleError = require('./handleError')
+const dotenv = require('dotenv');
+const handleSuccess = require('./handleSuccess');
+const handleError = require('./handleError');
 
-mongoose
-    .connect("mongodb://localhost:27017/testPost")
-    .then(() => console.log('資料庫連接成功'));
+dotenv.config({ path: '.env' });
+
+const mongoURL = process.env.mongoURL.replace(
+    '<password>',
+    process.env.DATABASE_PASSWORD
+);
+
+console.log(mongoURL);
+mongoose.connect(mongoURL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    dbName: 'testPost' // 替換為你要連接的資料庫名稱
+}).then(() => console.log('資料庫連接成功'));
 const requestListener = async (req, res) => {
 
     let body = "";
