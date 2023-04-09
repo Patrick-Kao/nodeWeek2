@@ -84,9 +84,9 @@ const requestListener = async (req, res) => {
         req.on('end', async () => {
             try {
                 const data = JSON.parse(body);
-                console.log(data)
+
                 const id = decodeURIComponent(req.url.slice(7))
-                console.log(id)
+
                 const patch = await Posts.deleteOne({ _id: id })
                 handleSuccess(res, patch);
 
