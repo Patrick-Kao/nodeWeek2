@@ -13,7 +13,6 @@ const mongoURL = process.env.mongoURL.replace(
     process.env.DATABASE_PASSWORD
 );
 
-console.log(mongoURL);
 mongoose.connect(mongoURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
