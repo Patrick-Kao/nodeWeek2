@@ -7,16 +7,8 @@
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Patrick-Kao/nodeWeek2.git"
-  },
   "author": "Patrick Kao",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Patrick-Kao/nodeWeek2/issues"
-  },
-  "homepage": "https://github.com/Patrick-Kao/nodeWeek2#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
     "mongoose": "^7.0.3",
