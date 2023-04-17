@@ -6,8 +6,8 @@ const dotenv = require('dotenv');
 const handleSuccess = require('./handleSuccess');
 const handleError = require('./handleError');
 
-dotenv.config({ path: '.env' });
-
+// dotenv.config({ path: '.env' });
+require('dotenv').config()
 const mongoURL = process.env.mongoURL.replace(
     '<password>',
     process.env.DATABASE_PASSWORD
@@ -97,4 +97,4 @@ const requestListener = async (req, res) => {
 
 }
 const server = http.createServer(requestListener);
-server.listen(3000);
+server.listen(process.env.PORT || 3000);
