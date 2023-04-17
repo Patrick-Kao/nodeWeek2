@@ -6,13 +6,13 @@ const dotenv = require('dotenv');
 const handleSuccess = require('./handleSuccess');
 const handleError = require('./handleError');
 
-// dotenv.config({ path: '.env' });
+
 require('dotenv').config()
-// const mongoURL = process.env.mongoURL.replace(
-//     '<password>',
-//     process.env.DATABASE_PASSWORD
-// );
-const mongoURL = 'mongodb+srv://a468223:963a4k5j@cluster0.g73qfcw.mongodb.net/test'
+const mongoURL = process.env.mongoURL.replace(
+    '<password>',
+    process.env.DATABASE_PASSWORD
+);
+
 mongoose.connect(mongoURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
