@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var path = require('path');
-var XLSX = require('xlsx')
+var XLSX = require('xlsx');
+var fs = require('fs');
 /* GET home page. */
 router.get('/', function (req, res, next) {
 
@@ -25,7 +26,7 @@ router.get('/', function (req, res, next) {
   console.log(path.join(__dirname, excelFilePath))
   res.sendFile(path.join(__dirname, excelFilePath), (err) => {
     // 下載完成後刪除Excel文件
-    // fs.unlinkSync(excelFilePath);
+    fs.unlinkSync(path.join(__dirname, excelFilePath));
   });
 });
 
