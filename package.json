@@ -1,25 +1,17 @@
 {
-  "name": "nodeweek",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "name": "hello-world",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Patrick-Kao/nodeWeek2.git"
-  },
-  "author": "Patrick Kao",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Patrick-Kao/nodeWeek2/issues"
-  },
-  "homepage": "https://github.com/Patrick-Kao/nodeWeek2#readme",
   "dependencies": {
-    "dotenv": "^16.0.3",
-    "mongoose": "^7.0.3",
-    "nodemon": "^2.0.22"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "xlsx": "^0.18.5"
   }
 }
